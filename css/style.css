@@ -24,21 +24,28 @@ body {
     z-index: -1;
     transition: all 0.3s ease;
 }
-
+.wholeRow{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .header-col{
- /* background-color: orangered; */
     display: flex;
-    align-items: center;
+    align-items: left;
+    /* margin-right: 4em; */
+    justify-content: right;
 }
 /* .header-right-col{
      display: flex;
      align-items: center;
  } */
 .header{
-  
-    margin: 1em;
+  /* background-color: pink; */
+    margin-right: 0.5em;
     text-align: right;
     width: 100%;
+    margin-bottom: 0.5em;
 }
 .heading-text{
   
@@ -77,26 +84,36 @@ color: white;
   max-width: 380px;
 }
 
+
 .grid {
   display: flex;
-  flex-wrap: wrap;
-}
-.grid__item { margin-bottom: 10px;
-margin-right: 10px; }
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+   /* margin-bottom: 10px;
+margin-right: 10px; */
+justify-content: center;
+align-items: flex-end;
+/* flex: 50%; */
+
+ }
+ .grid__item {
+  display: flex;
+  flex-direction: row;
+ }
 .product {
   position: relative;
   cursor: pointer;
-}
-.product {
-  
   background: transparent;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+  margin: 0.1em;
 }
+
 
 .product:hover {
   background: #ffb01d;
   
 }
+
 .tm-nav-link { 
   color: white;
   display: flex;
@@ -155,12 +172,7 @@ margin: auto;
   
 }
 
-.smLinks{
-  color: white;
-}
-.smLinks:hover{
-color: #ffb01d;
-}
+
 
 .flex-container{
   display: flex;
@@ -201,19 +213,32 @@ color: #ffb01d;
 ul{
   font-size:20px;
 }
-  
-.animate{
-  animation: shape-polymorph 5s;
+.icon-cls{
+  display: flex;
+   justify-content: center;
+
+} 
+.smLinks{
+  color: white;
+  margin: 0.15em;
+  transition: all 0.7s ease;
 }
 
-@keyframes shape-polymorph{
-  40%{
-    height: 30px;
-    width: 30px;
-    background: green;
-    border-radius: 50px;
-  }
+.icon-cls:hover .smLinks {
+  opacity: 0.2;
+  transition: all .3s;
 }
+
+.icon-cls .smLinks:hover {
+  color: #ffb01d;
+transform-origin:bottom;
+transform: scale(1.5);
+margin: 0.1em;
+  opacity: 1;
+  transition: all .3s;
+}
+
+
 .body-wrap{
     margin-top: 10%;
 }
