@@ -208,10 +208,25 @@ margin: auto;
   background-color: black;
   margin-bottom: 0.15em;
   border-radius:10px ;
-  
+  width:100%;  
  }
 ul{
   font-size:20px;
+}
+
+.tableEdu{
+  font-size:20px;
+	font-weight: 70;
+  padding: 0.5em;
+  border: 1px solid orange;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tableEdu:hover{
+  overflow:visible;
+  color: orange;
+  word-wrap: break-word;
 }
 .icon-cls{
   display: flex;

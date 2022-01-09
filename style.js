@@ -7,6 +7,19 @@
     //        $( "popuptext").show();
     //     });
     // });
+    // function SubForm (){
+    //     $.ajax({
+    //         url:'https://api.apispreadsheets.com/data/qHA8BpkAfKQgUC0s/',
+    //         type:'post',
+    //         data:$("#myForm").serializeArray(),
+    //         success: function(){
+    //           alert("Form Data Submitted :)")
+    //         },
+    //         error: function(){
+    //           alert("There was an error :(")
+    //         }
+    //     });
+    // }
     $(document).ready(function(){
         
         $('#openPopUp').click(function(){
@@ -41,6 +54,23 @@
                 $(".hideAll").show();
             }
         });
+        $('#myForm').ready(function(){
+            $('#submitBtn').click(function(){
+                $.ajax({
+                    url:'https://api.apispreadsheets.com/data/qHA8BpkAfKQgUC0s/',
+                    type:'post',
+                    data:$("#myForm").serializeArray(),
+                    success: function(){
+                      alert("Form Data Submitted :)")
+                    },
+                    error: function(){
+                      alert("There was an error :(")
+                    }
+                });
+                
+            });
+        })
+       
       
       });
 //  }
